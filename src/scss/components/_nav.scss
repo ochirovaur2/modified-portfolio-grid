@@ -1,0 +1,97 @@
+.nav{
+	z-index: 10;
+	justify-content: space-between;
+	background: transparent;
+	position: relative;
+	color: $color-grey-light-1;
+	padding: 2rem;
+	///////////////
+	// Internal flexbox
+	display: flex;
+	align-items: center;
+	@media only screen and (max-width: $bp-small) {
+	    flex-direction: column;
+	}
+	&__logo{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	////////////
+	// Title
+	&__title{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__icon{
+		width: 3rem;
+		height: 3rem;
+		display: block;
+	}
+	&__text{
+		font-size: 3rem;
+	}
+	////////////
+	// Subtitle
+	&__subtitle{
+		font-size: 1.6rem;
+		display: flex;
+		align-items:center;
+	}
+	.fa-award{
+		transform: translateY(3px);
+	}
+
+
+	/////////////////
+	// List
+
+	&__list{
+		display: flex;
+		font-size: 2.5rem;
+	}
+	&__item{
+		margin: 2rem;
+	}
+	&__link{
+		position: relative;
+		color: inherit;
+		padding-bottom: 1rem;
+		transition: $transition-speed-nav;
+		border-bottom: 3px solid transparent;
+
+		//////////////
+		// Hover effects for link color 
+
+		&:hover{
+			color: $color-primary;
+		}
+
+		//////////////
+		// Hover effects for border-bottom
+		&_not-current{
+			&::before{
+				content: "";
+				position: absolute;
+				bottom: -3px;
+				left: -100%;
+				width: 1%;
+				height: 3px;
+				background: $color-primary;
+				transition: all $transition-speed-nav cubic-bezier(.89,.2,.11,1.61);
+			}
+			
+			&:hover:before{
+				width: 100%;
+				left: 0%;
+			}
+
+		}
+		&_current{
+			border-bottom: 3px solid $color-primary;
+		}
+		
+	}
+}

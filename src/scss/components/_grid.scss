@@ -1,0 +1,18 @@
+.container{
+	display: grid;
+	position: relative;
+	width: 100vw;
+	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+	grid-template-rows: 15vh minmax(40rem, 85vh);
+}
+
+
+.nav{
+	grid-column: center-start / center-end;
+}
+.header{
+	grid-column: full-start / full-end;
+}
+.skills{
+	grid-column: center-start / center-end;
+}

@@ -1,0 +1,44 @@
+.btn{
+	display: inline-block;
+	background: $color-grey-light-1;
+	color: $color-grey-dark-2;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	padding: 1.8rem 2rem;
+	border-radius: 3px;
+    transition: color 1s;
+    position: relative;
+
+    //////// Hover effects
+    &:hover{
+		color: $color-grey-light-1;
+	}
+	&__text{
+		position: relative;
+		z-index: 10;
+	}
+
+    //////// Hover effects::before
+
+    &::before{
+    	content: "";
+    	position: absolute;
+    	top: 0;
+		left: 0;
+		transform: scaleY(0);
+		height: 100%;
+       	width: 5px;
+		background: inherit;
+		background: $color-primary;
+		z-index: 1;
+		transition: transform .3s,
+                    width .4s cubic-bezier(1,0,0,1) .3s,
+                    background-color .1s;
+
+    }
+    &:hover::before {
+		transform: scale(1);
+		width: 100%;
+	}
+	
+}
