@@ -21,15 +21,19 @@ $default-font-size: 1.6rem;
 
 $max-width: 1284px;
 
-// RESPONSIVE BREAKPOINTS
+// RESPONSIVE BREAKPOINTS (width)
 $bp-largest: 75em;   // 1200px
 $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;
+$bp-small: 29em;    // 600px;
+
+
+// RESPONSIVE BREAKPOINTS (height)
+$bp-height-normal: 37.5em;   // 800px;
 
 
 // Transition speed 
-
+$transition-speed: 0.3s;
 $transition-speed-nav: 0.4s;
 
 

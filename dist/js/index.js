@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', init);
 
 // Init App
 function init() {
+  // Delete span (for IE)
+  $('#header__text').css("display", "none");
+
   const txtElement = document.querySelector('.txt-type');
   const words = JSON.parse(txtElement.getAttribute('data-words'));
   const wait = txtElement.getAttribute('data-wait');
